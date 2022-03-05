@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-job:
+jobs:
   build-and-deploy: #그룹명
     runs-on: ubuntu-latest
       steps:
