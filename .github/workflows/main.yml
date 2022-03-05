@@ -6,17 +6,17 @@ on:
 jobs:
   build-and-deploy: #그룹명
     runs-on: ubuntu-latest
-      steps:
-        - name: Checkout
-          users: actions/checkout@v2
+    steps:
+      - name: Checkout
+        users: actions/checkout@v2
 
-        - name: Install and Build
-          run : |
-            yarn
-            yarn build
+      - name: Install and Build
+        run: |
+          yarn
+          yarn build
 
-        - name: Deploy 
-          uses: JamesIves/github-pages-deploy-action@v4.2.
-          with:
-            branch: gh-pages # The branch the action should deploy to.
-            folder: build # The folder the action should deploy.
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
